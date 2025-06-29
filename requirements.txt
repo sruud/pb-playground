@@ -1,0 +1,11 @@
+pedalboard
+librosa
+matplotlib
+ipdb
+mypy
+pytest
+coverage
+psutil
+mutagen
+# allure-pytest
+# pydub

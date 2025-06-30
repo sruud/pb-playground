@@ -1,4 +1,4 @@
-# Pedalboard Playground �️
+# Pedalboard Playground
 
 This is a small sandbox for exploring audio plugin testing and signal processing using [Spotify's Pedalboard](https://github.com/spotify/pedalboard), JUCE-based VSTs, and other audio libraries.
 

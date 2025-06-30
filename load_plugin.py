@@ -1,0 +1,27 @@
+from pedalboard import load_plugin
+
+# VST3
+# PFM - SimpleEQ project vst3
+# plugin = load_plugin(path_to_plugin_file="/Library/Audio/Plug-Ins/VST3/SimpleEQ.vst3")
+
+# Loading a specific plugin from a multi-plugin package like Xfer
+
+# Serum 2
+# plugin = load_plugin(plugin_name="Serum 2", path_to_plugin_file="/Library/Audio/Plug-Ins/VST3/Serum2.vst3")
+
+# Serum 2 FX
+# plugin = load_plugin(plugin_name="Serum 2 FX", path_to_plugin_file="/Library/Audio/Plug-Ins/VST3/Serum2.vst3")
+
+# Antares
+plugin = load_plugin(path_to_plugin_file="/Library/Audio/Plug-Ins/VST3/Auto-Key.vst3")
+
+# Components
+# plugin = load_plugin(path_to_plugin_file="/Library/Audio/Plug-Ins/Components/ARIA Player AU.component")
+
+plugin.show_editor()
+
+# TODO: capture screenshot of window
+# pyautogui pygetwindow
+
+# macOS Accessibility Inspector doesn't seem to allow me to inspect the window of the Python process
+# Menu bar name is Pedalboard

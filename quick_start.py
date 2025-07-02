@@ -1,6 +1,7 @@
-from pedalboard import Pedalboard, Chorus, Reverb
-from pedalboard.io import AudioFile
 from pathlib import Path
+
+from pedalboard import Chorus, Pedalboard, Reverb
+from pedalboard.io import AudioFile
 
 # This is a temporary quick start script for experimentation
 # Will be moved to src/examples/ in a later cleanup
@@ -23,17 +24,17 @@ audio_path = Path("audio_assets") / "hello_world.wav"
 # with AudioFile('some-file.wav') as f:
 
 with AudioFile(str(audio_path)) as f:
-  
-  # Open an audio file to write to:
-  # with AudioFile('output.wav', 'w', f.samplerate, f.num_channels) as o:
-  with AudioFile('hello_world_reverb.wav', 'w', f.samplerate, f.num_channels) as o:
-  
-    # Read one second of audio at a time, until the file is empty:
-    while f.tell() < f.frames:
-      chunk = f.read(f.samplerate)
-      
-      # Run the audio through our pedalboard:
-      effected = board(chunk, f.samplerate, reset=False)
-      
-      # Write the output to our output file:
-      o.write(effected)
+
+    # Open an audio file to write to:
+    # with AudioFile('output.wav', 'w', f.samplerate, f.num_channels) as o:
+    with AudioFile("hello_world_reverb.wav", "w", f.samplerate, f.num_channels) as o:
+
+        # Read one second of audio at a time, until the file is empty:
+        while f.tell() < f.frames:
+            chunk = f.read(f.samplerate)
+
+            # Run the audio through our pedalboard:
+            effected = board(chunk, f.samplerate, reset=False)
+
+            # Write the output to our output file:
+            o.write(effected)

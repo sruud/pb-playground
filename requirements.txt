@@ -7,5 +7,9 @@ pytest
 coverage
 psutil
 mutagen
+pyautogui
+# mido
 # allure-pytest
 # pydub
+# sounddevice==0.5.2
+# python-rtmidi -> not working for 3.13 - python-rtmidi 1.5.8

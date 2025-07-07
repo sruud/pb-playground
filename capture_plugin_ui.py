@@ -99,9 +99,8 @@ def other_thread():
             app_window.height,
         )
 
-        # I had to trim a bit - TODO: check left and top
         screenshot_image = pyautogui.screenshot(
-            region=(left, top, width - 10, height - 10)
+            region=(left + 15, top + 30, width - 23, height - 38)
         )
 
         screenshot_image.save("app_screenshot.png")

@@ -8,7 +8,7 @@ coverage
 psutil
 mutagen
 pyautogui
-# mido
+mido
 # allure-pytest
 # pydub
 # sounddevice==0.5.2
